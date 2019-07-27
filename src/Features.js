@@ -3,17 +3,18 @@ import './App.css';
 import Product from './Product';
 
 class Features extends Component{
+  /*
     constructor(props) {
         super(props)
       }
-
+*/
       render(){
           return Object.keys(this.props.features)
         .map(key => {
           const options = this.props.features[key].map((item, index) => {
             const selectedClass = item.name === this.state.selected[key].name ? 'feature__selected' : '';
             const featureClass = 'feature__option ' + selectedClass;
-            return <Product index ={index}  featureClass= {featureClass}  item ={item}  onCheckItem = {e => this.updateFeature(key, item)}/>
+            return <Product index={index} featureClass={featureClass} item={item} name = {item.name} cost={item.cost}  onCheckItem={e => this.updateFeature(key, item)}/>
           });
 
           return <div className="feature" key={key}>
