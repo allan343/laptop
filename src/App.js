@@ -54,7 +54,7 @@ class App extends Component {
           .reduce((acc, curr) => acc + this.state.selected[curr].cost, 0);    
 
 
-    const features = <Features features = {this.props.features}/>
+          const features = <Features features = {this.props.features} selected={this.state.selected} onCheckItemFn={this.updateFeature.bind(this)}/>
 
     return (
       <div className="App">

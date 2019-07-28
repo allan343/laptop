@@ -12,7 +12,7 @@ class Features extends Component{
           return Object.keys(this.props.features)
         .map(key => {
           const options = this.props.features[key].map((item, index) => {
-            const selectedClass = item.name === this.state.selected[key].name ? 'feature__selected' : '';
+            const selectedClass = item.name === this.props.selected[key].name ? 'feature__selected' : '';
             const featureClass = 'feature__option ' + selectedClass;
             return <Product index={index} featureClass={featureClass} item={item} name = {item.name} cost={item.cost}  onCheckItem={e => this.updateFeature(key, item)}/>
           });
@@ -28,4 +28,4 @@ class Features extends Component{
       }
 }
 
-export default Product;  
+export default Features;  
