@@ -12,13 +12,13 @@ render(){
 
  
     return <div className="summary__option" key={this.props.key}>
-            <div className="summary__option__label">{this.props.key}  </div>
-            <div className="summary__option__value">{this.state.selected[this.props.key].name}</div>
-            <div className="summary__option__cost">
-              { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
-                  .format(this.state.selected[this.props.key].cost) }
-            </div>
-        </div>
+    <div className="summary__option__label">{this.props.key}  </div>
+    <div className="summary__option__value">{this.props.selected[this.props.key].name}</div>
+    <div className="summary__option__cost">
+      { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
+          .format(this.props.selected[this.props.key].cost) }
+    </div>
+</div>
 }
 }
 

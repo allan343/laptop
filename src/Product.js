@@ -6,11 +6,7 @@ class Product extends Component{
     constructor(props) {
         super(props)
       }
-      static defaultProps = { item: {name:"",
-          cost:0
-
-      } };
-   
+      
 render(){
   console.log(this.props.index);
 return <li key={this.props.index} className="feature__item">
