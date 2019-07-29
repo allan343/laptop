@@ -9,14 +9,12 @@ class Item extends Component{
 
       
 render(){
-
- 
-    return <div className="summary__option" key={this.props.key}>
-    <div className="summary__option__label">{this.props.key}  </div>
-    <div className="summary__option__value">{this.props.selected[this.props.key].name}</div>
+    return <div className="summary__option" key={this.props.mykey}>
+    <div className="summary__option__label">{this.props.mykey}  </div>
+    <div className="summary__option__value">{this.props.selected[this.props.mykey].name}</div>
     <div className="summary__option__cost">
       { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
-          .format(this.props.selected[this.props.key].cost) }
+          .format(this.props.selected[this.props.mykey].cost) }
     </div>
 </div>
 }
