@@ -38,7 +38,6 @@ class App extends Component {
   }
 
   render() {
-    console.log( "array? "+ Object.keys(this.state.selected));
     const summary = Object.keys(this.state.selected)
           .map(key =>
         <Item mykey={key} selected={this.state.selected}/>
