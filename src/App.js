@@ -3,6 +3,7 @@ import './App.css';
 import Product from './Product';
 import Features from './Features';
 import Item from './Item';
+import GreenLeaf from './GreenLeaf';
 
 class App extends Component {
   constructor(props){
@@ -61,6 +62,8 @@ class App extends Component {
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
             { features }
           </section>
+          {
+            /*
           <section className="main__summary">
             <h3>NEW GREENLEAF 2018</h3>
             {summary}
@@ -71,7 +74,9 @@ class App extends Component {
                   .format(total) }
               </div>
             </div>
-          </section>
+          </section>*/
+            <GreenLeaf summary = {summary} total = {total}  />
+          }
         </main>
       </div>
     );
